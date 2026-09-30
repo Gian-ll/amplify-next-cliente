@@ -4,6 +4,7 @@ import "./app.css";
 
 import AuthenticatorWrapper from "./AuthenticatorWrapper";
 import "@aws-amplify/ui-react/styles.css";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
