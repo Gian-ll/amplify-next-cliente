@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Bodoni_Moda, Jost } from "next/font/google";
-// @ts-expect-error CSS side-effect imports are handled by Next.js.
 import "./app.css";
 
 import AuthenticatorWrapper from "./AuthenticatorWrapper";
@@ -10,6 +9,7 @@ const display = Bodoni_Moda({
   subsets: ["latin"],
   style: ["normal", "italic"],
   axes: ["opsz"],
+  adjustFontFallback: false,
   variable: "--font-display",
 });
 
