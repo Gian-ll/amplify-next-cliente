@@ -20,22 +20,13 @@ export default function Productos() {
 
   return (
     <div>
-      <h1>Productos</h1>
+      <h1 className="page-title">Productos</h1>
 
-      {products.length === 0 && <p>Aún no hay productos.</p>}
+      {products.length === 0 && <p className="empty">Aún no hay productos.</p>}
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
-          gap: 16,
-        }}
-      >
+      <div className="product-grid">
         {products.map((p) => (
-          <div
-            key={p.id}
-            style={{ border: "1px solid #ddd", borderRadius: 8, padding: 12 }}
-          >
+          <div key={p.id} className="product-card">
             {p.imageKey && <ProductImage path={p.imageKey} />}
             <h3>{p.name}</h3>
             <p>{p.description}</p>

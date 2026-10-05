@@ -7,10 +7,10 @@ export default function NavBar() {
   const { signOut } = useAuthenticator();
 
   return (
-    <nav style={{ display: "flex", gap: 16, padding: 16, alignItems: "center" }}>
+    <nav className="site-nav">
       <Link href="/productos">Productos</Link>
       <Link href="/agregar">Agregar producto</Link>
-      <button onClick={signOut} style={{ marginLeft: "auto" }}>
+      <button onClick={signOut} className="signout">
         Cerrar sesión
       </button>
     </nav>

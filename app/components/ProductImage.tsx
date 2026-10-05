@@ -11,6 +11,6 @@ export default function ProductImage({ path }: { path: string }) {
   }, [path]);
 
   return url ? (
-    <img src={url} alt="Producto" style={{ width: "100%", borderRadius: 8 }} />
+    <img src={url} alt="Producto" className="product-image" />
   ) : null;
 }

@@ -54,11 +54,8 @@ export default function AgregarProducto() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{ display: "grid", gap: 12, maxWidth: 400 }}
-    >
-      <h1>Agregar producto</h1>
+    <form onSubmit={handleSubmit} className="product-form">
+      <h1 className="page-title">Agregar producto</h1>
 
       <input
         placeholder="Nombre"
@@ -86,11 +83,11 @@ export default function AgregarProducto() {
         onChange={(e) => setFile(e.target.files?.[0] ?? null)}
       />
 
-      <button type="submit" disabled={loading}>
+      <button type="submit" disabled={loading} className="button">
         {loading ? "Guardando..." : "Guardar producto"}
       </button>
 
-      {message && <p>{message}</p>}
+      {message && <p className="form-message">{message}</p>}
     </form>
   );
 }
